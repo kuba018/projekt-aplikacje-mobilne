@@ -57,6 +57,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.core.ktx)
     implementation(libs.google.material)
 
     implementation(libs.androidx.core.ktx)
@@ -77,7 +78,11 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
 
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
+
     testImplementation(libs.junit4)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

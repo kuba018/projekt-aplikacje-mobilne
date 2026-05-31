@@ -6,7 +6,7 @@ import com.example.projekt_aplikacje_mobilne.model.ThemeMode
 
 data class UserPreferences(
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
-    val fontScaleOption: FontScaleOption = FontScaleOption.NORMAL,
-    val productLayoutMode: ProductLayoutMode = ProductLayoutMode.LIST,
-    val favoriteProductIds: Set<String> = emptySet()
+    val fontScale: FontScaleOption = FontScaleOption.NORMAL,
+    val layoutMode: ProductLayoutMode = ProductLayoutMode.LIST,
+    val favoriteIds: Set<String> = emptySet()
 )

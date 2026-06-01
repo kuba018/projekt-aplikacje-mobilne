@@ -1,8 +1,6 @@
 package com.example.projekt_aplikacje_mobilne.ui.shared
 
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Settings
@@ -13,7 +11,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,6 +39,7 @@ fun AppScaffold(
                             )
                         }
                     }
+
                     if (onOpenSettings != null) {
                         IconButton(onClick = onOpenSettings) {
                             Icon(

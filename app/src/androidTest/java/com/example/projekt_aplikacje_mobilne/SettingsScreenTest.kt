@@ -65,12 +65,13 @@ class SettingsScreenTest {
         }
 
         composeTestRule.onNodeWithTag(TestTags.THEME_DARK).performClick()
-        composeTestRule.waitForIdle()
 
-        val preferences = runBlocking {
-            repository.preferencesFlow.first()
+        composeTestRule.waitUntil(timeoutMillis = 5_000) {
+            runBlocking {
+                repository.preferencesFlow.first().themeMode == ThemeMode.DARK
+            }
         }
-
+        val preferences = runBlocking { repository.preferencesFlow.first() }
         assertEquals(ThemeMode.DARK, preferences.themeMode)
     }
 }
